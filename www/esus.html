@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="Ateliers Esus, accueil du fablab lyonnais">
+  <meta desc="Fablab ateliers esus, imprimante 3D, DIY bois, textile, électronique et découpe laser">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/BootstrapXL.css">
+  <!-- plugin pour le menu mobile -->
+  <link rel="stylesheet" href="../node_modules/jasny-bootstrap/css/jasny-bootstrap.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/formulaires.css">
+  <title>Les ateliers Esus, fablab & atelier de création lyonnais</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- gestion de la navbar et du menu mobile -->
+    <nav class="navbar navbar-fixed-top nopadding">
+
+      <!-- menu mobile (toggle) -->
+      <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+        <button id="menu-toggle" type="button" class="btn hidden-md-up navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas=".wrapper">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-barBlack"></span>
+          <span class="icon-barBlack"></span>
+          <span class="icon-barBlack"></span>
+        </button>
+      </div>
+      <div id="navMenuMobile" class="navmenu navmenu-fixed-left offcanvas-xs hidden-sm hidden-md hidden-lg hidden-xl">
+        <div class="connexionMobile">
+          <ul class="nav navmenu-nav">
+            <li class="col-xs-6" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+              <a href="" class="btn" data-toggle="modal" data-target="#moduleConnexion">connexion</a>
+            </li>
+            <li class="col-xs-6">
+              <a href="" class="btn" data-toggle="modal" data-target="#moduleInscription">s'inscrire</a>
+            </li>
+            <li class="col-xs-6 col-xs-push-3">
+              <a href="panier.html" class="btn">panier</a>
+            </li>
+          </ul>
+          <ul class=" nav navmenu-nav">
+            <li class="nav-item">
+              <a href="esus.html">ésus</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="ateliers.html">les ateliers</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="workshop.html">workshops & formations</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="coworking.html">espace de<br>co-working</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="reservation.html">réserver</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="news.html">news</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Menu Desktop & tablets -->
+      <!-- Controle de la navigation en 2 parties: connexion et nav générale -->
+      <div id="navbar" class="navbar-collapse collapse navbarfull">
+        <!-- partie connexion/panier -->
+        <div class="navbar-brand col-sm-push-1 col-sm-2">
+          <a href="esus.html"><img src="../img/logo_web.png" alt="logo esus ateliers"></a>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-push-6 col-lg-push-7 col-xl-push-7 memberNav">
+              <ul class="nav navbar-nav col-sm-7 col-lg-5 col-xl-4" id="connexion-nav">
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-toggle="modal" data-target="#moduleConnexion">se connecter</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-toggle="modal" data-target="#moduleInscription">s'inscrire</a>
+                </li>
+                <li class="nav-item">
+                  <a href="panier.html" class="nav-link">panier</a>
+                </li>
+                <li class="divider">
+                  <hr />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- navigation du site -->
+          <div class="row">
+
+            <ul class="nav navbar-nav col-sm-12 col-sm-push-5" id="main-nav">
+              <li class="nav-item col-sm-1">
+                <a href="esus.html" class="nav-link">ésus</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="ateliers.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link">les ateliers</a>
+                <ul class="dropdown-menu">
+                  <li><a href="ateliers.html#section2" class="UpperCaseLink">le bois</a></li>
+                  <li><a href="ateliers.html#section3" class="UpperCaseLink">électronique</a></li>
+                  <li><a href="ateliers.html#section4" class="UpperCaseLink">impression 3D</a></li>
+                  <li><a href="ateliers.html#section5" class="UpperCaseLink">textile</a></li>
+                  <li><a href="ateliers.html#section6" class="UpperCaseLink">découpe laser</a></li>
+                </ul>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="workshop.html" class="nav-link">formations &<br />workshops</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="coworking.html" class="nav-link">espace de <br />co-working</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="reservation.html" class="nav-link">réserver</a>
+              </li>
+              <li class="nav-item col-sm-2">
+                <a href="news.html" class="nav-link">news</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- MODALS // GESTION CONNEXION / INSCRIPTION -->
+    <div id="moduleConnexion" class="modal fade nopadding" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">se connecter</h4>
+          </div>
+          <div class="modal-body  col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+            <form class="form-group">
+              <input type="email" class="form-control" id="emailUser" placeholder="Email">
+              <input type="password" class="form-control" id="mdpUser" placeholder="Mot de passe">
+              <a href="" id="oubliMdp" class="pull-right lienFormulaire">mot de passe oublié ?</a>
+              <div>
+                <button type="submit" class="btnNoir col-xs-12">connexion</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 nopadding">
+                  <p class="infosSupp pull-right">pas encore inscrit ?</p>
+                </div>
+                <div class="col-sm-6 enculeurDeMouche">
+                  <a href="#moduleInscription" class="lienFormulaire" data-dismiss="modal" data-toggle="modal">Créer un compte</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="moduleInscription" class="modal fade nopadding" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">s'inscrire</h4>
+          </div>
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+            <form class="form-group">
+              <div class="row">
+                <div class="col-xs-11 col-xs-offset-1 choixSexe">
+                  <div class="col-xs-6">
+                    <div class="row">
+                      <input type="radio" id="radioMr" name="RadioSexe" value="checked" class="col-xs-2">
+                      <label for="radioMr">M.</label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="row">
+                      <input type="radio" id="radioMme" name="RadioSexe" value="" class="col-xs-2">
+                      <label for="radioMr">Mme</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <input type="text" class="form-control" id="pseudoUserInsc" placeholder="Nom d'utilisateur">
+              <input type="password" class="form-control" id="mdpUserInsc" placeholder="Mot de passe">
+              <input type="password" class="form-control" id="mdpUserInscVerif" placeholder="Vérification mot de passe">
+              <input type="email" class="form-control" id="emailUserInsc" placeholder="Email">
+              <input type="text" class="form-control" id="telUserInsc" placeholder="Téléphone">
+              <input type="text" class="form-control" id="nomUserInsc" placeholder="Nom">
+              <input type="text" class="form-control" id="prenomUserInsc" placeholder="Prénom">
+              <input type="text" class="form-control" id="adresseUserInsc" placeholder="Adresse">
+              <input type="text" class="form-control" id="villeUserInsc" placeholder="Ville">
+              <div class="row">
+                <div class="col-xs-6 col-sm-7">
+                  <input type="text" class="form-control pull-right" id="cpUserInsc" placeholder="Code postal">
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                  <input type="text" class="form-control pull-left" id="paysUserInsc" placeholder="Pays">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-11 col-xs-offset-1">
+                  <input type="checkbox" id="readCGS" name="checkboxCGS" value="true" class="col-xs-2">
+                  <label for="readCGS" class="col-xs-8">J'ai lu et j'accepte les conditions générales d'utilisation</label>
+                </div>
+              </div>
+              <div>
+                <button type="submit" value="submit" class="btnNoir col-xs-12">s'inscrire</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 nopadding">
+                  <p class="infosSupp pull-right">Déjà inscrit ?</p>
+                </div>
+                <div class="col-sm-6 enculeurDeMouche">
+                  <a href="#moduleConnexion" class="lienFormulaire pull-left" data-dismiss="modal" data-toggle="modal">Connectez-vous</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- début du wrapper pour règler l'affichage des modales en mobile  -->
+  <div class="wrapper">
+    <section id="section1">
+      <div class="content sectionVideo">
+        <div class="imgMobileHead hidden-sm hidden-md hidden-lg">
+          <img src="../img/imgHeadMobile.png" class="img-responsive">
+        </div>
+        <div id="videoContainer" class="hidden-xs">
+          <video preload="true" autoplay="autoplay" loop="true" id="bgvid" class="videoFS">
+            <source src="../video/ESUS_V4.webm" type="video/webm">
+            <source src="../video/ESUS_V4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="content">
+        <section id="section2">
+          <div class="row">
+            <div class="creaLyonHeader col-xs-12 col-md-6 col-md-push-3">
+              <img src="../img/creaLyonLogoMedium.png" alt="la création lyonnaise logo" class="creaLyonLogo hidden-xs img-responsive col-sm-12 col-md-6">
+              <div id="creaLyonDesc" class="col-xs-12 col-md-6">
+                <p class="textDesc">
+                  Pellentesque quis orci sit amet arcu luctus faucibus at in tellus. Aliquam sit amet tristique neque.
+                  <br /> Pellentesque at dolor est. Sed in eleifend elit. Morbi dictum porta dapibus. Curabitur fermentum convallis mauris, id bibendum eros porttitor eu. Curabitur porttitor blandit massa non imperdiet. Mauris et justo vitae dui auctor tempus.
+                  <br /> Ut pellentesque lectus eget enim blandit, eget semper odio iaculis. Mauris ullamcorper eget diam sed dapibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row sliderWorkshop">
+            <div id="homeCarousel" class="hidden-xs">
+              <h1 class="sliderTitle col-md-10 col-md-offset-2">Les derniers workshop d'ésus : </h1>
+              <!-- Carroussel -->
+              <div id="carouselWS" class="carousel slide  col-md-push-3" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/imgSlider.jpg" alt="derniers workshop, première slide" class="first-slide img-responsive">
+                      <div class="carousel-caption pull-right">
+                        <p class="titre">workshop impression 3D</p>
+                        <button type="button" name="BtnWorkshopInfo" id="ReadWorkshopInfo" class="btn">
+                          <a href="">lire</a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/imgSlider.jpg" alt="derniers workshop, deuxième slide" class="second-slide img-responsive">
+                      <div class="carousel-caption pull-right">
+                        <p class="titre">workshop impression 3D</p>
+                        <button type="button" name="BtnWorkshopInfo2" id="ReadWorkshopInfo2" class="btn">
+                          <a href="">lire</a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="../img/imgSlider.jpg" alt="derniers workshop, troisième slide" class="third-slide img-responsive">
+                      <div class="carousel-caption pull-right">
+                        <p class="titre">workshop impression 3D</p>
+                        <button type="button" name="BtnWorkshopInfo3" id="ReadWorkshopInfo3" class="btn">
+                          <a href="">lire</a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselWS" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselWS" data-slide-to="1"></li>
+                      <li data-target="#carouselWS" data-slide-to="2"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section3">
+          <div id="ateliersCategories" class="presAteliers">
+            <!-- pour le mobile -->
+            <div class="hidden-sm hidden-md hidden-lg hidden-xl">
+              <a href="" id="catBois">
+                <img src="../img/atelierBoisMobile.png" alt="" class="img-responsive">
+              </a>
+              <a href="" id="cat3d">
+                <img src="../img/atelier3DMobile.png" alt="" class="img-responsive">
+              </a>
+              <a href="" id="catElectronique">
+                <img src="../img/atelierElecMobile.png" alt="" class="img-responsive">
+              </a>
+              <a href="" id="catTextile">
+                <img src="../img/atelierTextileMobile.png" alt="" class="img-responsive">
+              </a>
+              <!-- fin gestion des catégories mobiles -->
+            </div>
+            <div class="row hidden-xs">
+              <div class="col-sm-6 col-sm-push-3 col-xl-9">
+                <a href="" id="catBois">
+                  <img src="../img/atelierBoisMedium.png" alt="" class="img-responsive hidden-xs col-sm-5 col-sm-push-1 col-xl-2 col-xl-push-4">
+                </a>
+                <a href="" id="cat3d">
+                  <img src="../img/atelier3DMedium.png" alt="" class="img-responsive hidden-xs col-sm-5 col-sm-push-1 col-xl-2 col-xl-push-4">
+                </a>
+              </div>
+            </div>
+            <div class="row hidden-xs">
+              <div class="col-sm-6 col-sm-push-3 col-xl-9">
+                <a href="" id="catElectronique">
+                  <img src="../img/atelierElecMedium.png" alt="" class="img-responsive hidden-xs col-sm-5 col-sm-push-1 col-xl-2 col-xl-push-4">
+                </a>
+                <a href="" id="catTextile">
+                  <img src="../img/atelierTextileMedium.png" alt="" class="img-responsive hidden-xs col-sm-5 col-sm-push-1 col-xl-2 col-xl-push-4">
+                </a>
+              </div>
+            </div>
+            <div class="row hidden-sm hidden-md hidden-lg hidden-xl">
+              <span class="col-xs-4 col-xs-push-4">&</span>
+            </div>
+        </section>
+
+        <section id="section4">
+          <div class="offresEsus">
+            <div class="row">
+              <div class="offre col-xs-12 col-sm-6 col-md-4 col-xl-3 col-md-push-2 col-xl-push-3">
+                <a href="">
+                  <img src="../img/formationMedium.png" alt="" id="offre1Img" class="img-responsive hidden-xs">
+                  <img src="../img/formationMobile.png" alt="" id="offre1Img" class="img-responsive hidden-sm hidden-md hidden-lg hidden-xl">
+                </a>
+                <a href="" class="btn btn-remp hidden-xs col-sm-6 col-sm-push-3 col-xl-push-3">découvrir les offres</a>
+              </div>
+              <div class="offre col-xs-12 col-sm-6 col-md-4 col-xl-3 col-md-push-2 col-xl-push-3">
+                <a href="">
+                  <img src="../img/coworkingMedium.png" alt="" id="offre2Img" class="img-responsive hidden-xs">
+                  <img src="../img/coworkingMobile.png" alt="" id="offre2Img" class="img-responsive hidden-sm hidden-md hidden-lg hidden-xl">
+                </a>
+                <a href="" class="btn btn-remp hidden-xs col-sm-6 col-sm-push-3 col-xl-push-3">découvrir les offres</a>
+              </div>
+            </div>
+            <div class="divideSection4 hidden-xs hidden-sm col-md-6 col-md-push-3 col-xl-4 col-xl-push-4">
+              <hr>
+            </div>
+          </div>
+        </section>
+
+        <section id="section5">
+          <div id="contact">
+            <div class="col-xs-12 col-md-push-2 col-xl-push-3 contactHeader">
+              <span>NOUS TROUVER</span>
+            </div>
+            <div id="mapEsus" class="col-sm-12 col-md-4 col-md-push-2 col-xl-push-3 hidden-xs hidden-sm">
+            </div>
+            <div class="infoContact col-xs-12 col-sm-12 col-md-4 col-md-push-1 col-xl-push-2">
+              <div id="adresseEsus" class="texteContact">
+                <p>13</p>
+                <p>Rue Bouteille</p>
+                <p>69001 LYON</p>
+              </div>
+              <div id="contactEsus" class="texteContact">
+                <p>33 (0) 4 25 27 67 95</p>
+                <p>contact@ateliersesus.com</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin container  -->
+    <footer class="container">
+      <div class="col-xs-12 nopadding">
+
+        <div class="footerLeft col-xs-12 col-md-2 col-md-push-2">
+          <div class="row">
+            <span class="col-sm-12 hidden-xs hidden-sm">nous suivre</span>
+            <br />
+            <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-12 col-md-push-0 socialMedia">
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/facebook.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/insta.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/youtube.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/twitter.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+            </div>
+          </div>
+          <div class="row hidden-md hidden-lg hidden-xl">
+            <div id="" class="newsletterMobile col-xs-12">
+              <div id="newsletter" class="col-xs-12 nopadding">
+                <form class="navbar-form col-xs-8 col-xs-push-2 col-sm-6 col-sm-push-4">
+                  <div class="form-group col-xs-12 nopadding">
+                    <span>newsletter</span>
+                    <br />
+                    <input type="text" class="form-control">
+                  </div>
+                  <button type="submit" name="newsletterBtn" class="btn btnFondNoir col-xs-6 col-xs-push-3">ok</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="liensFooter row">
+            <a href="" id="partenaires" class="col-xs-12">Partenaires</a>
+            <a href="" id="condGenerales" class="col-xs-12">Conditions générales de vente</a>
+          </div>
+        </div>
+
+        <div id="" class="footerMiddle hidden-xs hidden-sm col-sm-4 col-sm-push-2">
+          <div id="esusFooterAddress" class="row">
+            <div id="footerAddressLeft" class="col-md-4 footerAddressLeft">
+              <div class="text-right">
+                <p>ateliers
+                  <br />ésus</p>
+              </div>
+            </div>
+            <div id="" class="footerAddressRight col-md-8">
+              <div class="text-left">
+                <div class="addressUp">
+                  <p>13
+                    <br />Rue Bouteille
+                    <br />69001 LYON</p>
+                </div>
+                <div id="footerContact" class="addressDown">
+                  <p>04 25 27 67 95
+                    <br />contact@ateliersesus.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="" class="footerRight hidden-xs hidden-sm col-xs-8 col-xs-push-2 col-md-2 col-md-push-2">
+          <div id="newsletter">
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <span>newsletter</span>
+                <br />
+                <input type="text" class="form-control">
+              </div>
+              <br />
+              <button type="submit" name="newsletterBtn" class="btn btnFondNoir">ok</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- fin du wrapper -->
+
+  <!-- scripts essais  -->
+  <script type=text/javascript src="../node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script type=text/javascript src="../node_modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+  <!-- plugin pour le menu mobile -->
+  <script type=text/javascript src="../node_modules/jasny-bootstrap/js/jasny-bootstrap.js" charset="utf-8"></script>
+  <!-- plugin pour le hover du menu dropdown -->
+  <script src="../js/jquery.bootstrap-dropdown-hover.js"></script>
+  <!-- gestion du changement au scroll de la navigation -->
+  <script type="text/javascript" src="../node_modules/classie/classie.js"></script>
+  <script type=text/javascript src="../js/main.js"></script>
+  <!-- gestion de la map  -->
+  <script type=text/javascript src="../js/mapEsus.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+</body>
+
+</html>

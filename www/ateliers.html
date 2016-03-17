@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta title="Ateliers Esus, présentation des ateliers du fablab lyonnais">
+  <meta desc="Fablab ateliers esus, imprimante 3D, DIY bois, textile, électronique et découpe laser">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/BootstrapXL.css">
+  <!-- plugin pour le menu mobile -->
+  <link rel="stylesheet" href="../node_modules/jasny-bootstrap/css/jasny-bootstrap.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/formulaires.css">
+  <link rel="stylesheet" href="../css/ateliers.css">
+  <title>Les différentes ateliers proposés par les ateliers Esus</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- gestion de la navbar et du menu mobile -->
+    <nav class="navbar navbar-fixed-top nopadding">
+
+      <!-- menu mobile (toggle) -->
+      <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+        <button id="menu-toggle" type="button" class="btn hidden-md-up navbar-toggle" data-toggle="offcanvas" data-target=".navmenu" data-canvas=".wrapper">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-barBlack"></span>
+          <span class="icon-barBlack"></span>
+          <span class="icon-barBlack"></span>
+        </button>
+      </div>
+      <div id="navMenuMobile" class="navmenu navmenu-fixed-left offcanvas-xs hidden-sm hidden-md hidden-lg hidden-xl">
+        <div class="connexionMobile">
+          <ul class="nav navmenu-nav">
+            <li class="col-xs-6" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+              <a href="" class="btn" data-toggle="modal" data-target="#moduleConnexion">connexion</a>
+            </li>
+            <li class="col-xs-6">
+              <a href="" class="btn" data-toggle="modal" data-target="#moduleInscription">s'inscrire</a>
+            </li>
+            <li class="col-xs-6 col-xs-push-3">
+              <a href="panier.html" class="btn">panier</a>
+            </li>
+          </ul>
+          <ul class=" nav navmenu-nav">
+            <li class="nav-item">
+              <a href="esus.html">ésus</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="ateliers.html">les ateliers</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="workshop.html">workshops & formations</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="coworking.html">espace de<br>co-working</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="reservation.html">réserver</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+            <li class="nav-item">
+              <a href="news.html">news</a>
+            </li>
+            <li class="dividerMobile">
+              <hr />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Menu Desktop & tablets -->
+      <!-- Controle de la navigation en 2 parties: connexion et nav générale -->
+      <div id="navbar" class="navbar-collapse collapse navbarfull">
+        <!-- partie connexion/panier -->
+        <div class="navbar-brand col-sm-push-1 col-sm-2">
+          <a href="esus.html"><img src="../img/logo_web.png" alt="logo esus ateliers"></a>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-push-6 col-lg-push-7 col-xl-push-7 memberNav">
+              <ul class="nav navbar-nav col-sm-7 col-lg-5 col-xl-4" id="connexion-nav">
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-toggle="modal" data-target="#moduleConnexion">se connecter</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-toggle="modal" data-target="#moduleInscription">s'inscrire</a>
+                </li>
+                <li class="nav-item">
+                  <a href="panier.html" class="nav-link">panier</a>
+                </li>
+                <li class="divider">
+                  <hr />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- navigation du site -->
+          <div class="row">
+
+            <ul class="nav navbar-nav col-sm-12 col-sm-push-5" id="main-nav">
+              <li class="nav-item col-sm-1">
+                <a href="esus.html" class="nav-link">ésus</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="ateliers.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link">les ateliers</a>
+                <ul class="dropdown-menu">
+                  <li><a href="ateliers.html#section2" class="UpperCaseLink">le bois</a></li>
+                  <li><a href="ateliers.html#section3" class="UpperCaseLink">électronique</a></li>
+                  <li><a href="ateliers.html#section4" class="UpperCaseLink">impression 3D</a></li>
+                  <li><a href="ateliers.html#section5" class="UpperCaseLink">textile</a></li>
+                  <li><a href="ateliers.html#section6" class="UpperCaseLink">découpe laser</a></li>
+                </ul>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="workshop.html" class="nav-link">formations &<br />workshops</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="coworking.html" class="nav-link">espace de <br />co-working</a>
+              </li>
+              <li class="nav-item col-sm-1">
+                <a href="reservation.html" class="nav-link">réserver</a>
+              </li>
+              <li class="nav-item col-sm-2">
+                <a href="news.html" class="nav-link">news</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- MODALS // GESTION CONNEXION / INSCRIPTION -->
+    <div id="moduleConnexion" class="modal fade nopadding" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">se connecter</h4>
+          </div>
+          <div class="modal-body  col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+            <form class="form-group">
+              <input type="email" class="form-control" id="emailUser" placeholder="Email">
+              <input type="password" class="form-control" id="mdpUser" placeholder="Mot de passe">
+              <a href="" id="oubliMdp" class="pull-right lienFormulaire">mot de passe oublié ?</a>
+              <div>
+                <button type="submit" class="btnNoir col-xs-12">connexion</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 nopadding">
+                  <p class="infosSupp pull-right">pas encore inscrit ?</p>
+                </div>
+                <div class="col-sm-6 enculeurDeMouche">
+                  <a href="#moduleInscription" class="lienFormulaire" data-dismiss="modal" data-toggle="modal">Créer un compte</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="moduleInscription" class="modal fade nopadding" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close pull-left" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">s'inscrire</h4>
+          </div>
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+            <form class="form-group">
+              <div class="row">
+                <div class="col-xs-11 col-xs-offset-1 choixSexe">
+                  <div class="col-xs-6">
+                    <div class="row">
+                      <input type="radio" id="radioMr" name="RadioSexe" value="checked" class="col-xs-2">
+                      <label for="radioMr">M.</label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="row">
+                      <input type="radio" id="radioMme" name="RadioSexe" value="" class="col-xs-2">
+                      <label for="radioMr">Mme</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <input type="text" class="form-control" id="pseudoUserInsc" placeholder="Nom d'utilisateur">
+              <input type="password" class="form-control" id="mdpUserInsc" placeholder="Mot de passe">
+              <input type="password" class="form-control" id="mdpUserInscVerif" placeholder="Vérification mot de passe">
+              <input type="email" class="form-control" id="emailUserInsc" placeholder="Email">
+              <input type="text" class="form-control" id="telUserInsc" placeholder="Téléphone">
+              <input type="text" class="form-control" id="nomUserInsc" placeholder="Nom">
+              <input type="text" class="form-control" id="prenomUserInsc" placeholder="Prénom">
+              <input type="text" class="form-control" id="adresseUserInsc" placeholder="Adresse">
+              <input type="text" class="form-control" id="villeUserInsc" placeholder="Ville">
+              <div class="row">
+                <div class="col-xs-6 col-sm-7">
+                  <input type="text" class="form-control pull-right" id="cpUserInsc" placeholder="Code postal">
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                  <input type="text" class="form-control pull-left" id="paysUserInsc" placeholder="Pays">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-11 col-xs-offset-1">
+                  <input type="checkbox" id="readCGS" name="checkboxCGS" value="true" class="col-xs-2">
+                  <label for="readCGS" class="col-xs-8">J'ai lu et j'accepte les conditions générales d'utilisation</label>
+                </div>
+              </div>
+              <div>
+                <button type="submit" value="submit" class="btnNoir col-xs-12">s'inscrire</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 nopadding">
+                  <p class="infosSupp pull-right">Déjà inscrit ?</p>
+                </div>
+                <div class="col-sm-6 enculeurDeMouche">
+                  <a href="#moduleConnexion" class="lienFormulaire pull-left" data-dismiss="modal" data-toggle="modal">Connectez-vous</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- début du wrapper pour règler l'affichage des modales en mobile  -->
+  <div class="wrapper">
+    <section id="section1">
+      <div class="content">
+        <div>
+          <img src="../img/ateliers/imgHeadMobile.png" class="img-responsive col-xs-12 nopadding hidden-sm hidden-md hidden-lg hidden-xl">
+          <img src="../img/ateliers/imgHead.jpg" class="img-responsive col-sm-12 nopadding hidden-xs">
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="content">
+        <section id="section2">
+          <!-- nbre postes -->
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2">
+              <span class="quantitePoste col-xs-12 col-sm-3 nopadding">6</span>
+              <span class="nomPoste col-xs-12 col-sm-9 col-md-12 col-lg-9">postes bois</span>
+            </div>
+          </div>
+          <div class="row sliderBois">
+            <!-- Carroussel -->
+            <div id="posteBoisCarousel" class="col-xs-12 col-sm-4 col-sm-pull-2 pull-right">
+              <div id="carouselBois" class="carousel slide col-xs-12" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/ateliers/atelierBois.jpg" alt="poste bois, première slide" class="first-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierBois.jpg" alt="poste bois, deuxième slide" class="second-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierBois.jpg" alt="poste bois, troisième slide" class="third-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierBois.jpg" alt="poste bois, quatrième slide" class="fourth-slide img-responsive nopadding col-xs-12">
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators carouselBois-indicators">
+                      <li data-target="#carouselBois" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselBois" data-slide-to="1"></li>
+                      <li data-target="#carouselBois" data-slide-to="2"></li>
+                      <li data-target="#carouselBois" data-slide-to="3"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2 descriptionPoste pull-left">
+              <!-- paragraphe -->
+              <div class="row hidden-xs">
+                <div class="col-sm-9 col-sm-offset-3">
+                  <p class="presentationAtelier">blabalbalbalabalbziabzoabzdouabdazdboaidnzpaizdjpaizjdpoazdjpoajdpoazjdpoajdzpoajz</p>
+                </div>
+              </div>
+              <!-- liste outils -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 listeOutil">
+                  <div class="col-xs-12 col-sm-6 nopadding">
+                    <p class="outil"><span class="hidden-xs">-</span> 1 scie sauteuse</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 1 scie circulaire</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 1 scie à onglet radiale</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 1 dremel et ses accessoires</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 nopadding">
+                    <p class="outil"><span class="hidden-xs">-</span> 1 ponceuse</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 2 défonceuses</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 3 établis</p>
+                    <p class="outil"><span class="hidden-xs">-</span> Outillage</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <a href="" class="col-xs-4 col-xs-offset-4 btn btnReservation">réserver</a>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <hr class="divider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section3">
+          <!-- nbre postes -->
+          <div class="row">
+            <div class="col-xs-10 col-xs-pull-1 col-sm-4 col-sm-pull-2 pull-right">
+              <span class="quantitePosteDroite col-xs-12 col-sm-3 nopadding pull-right">2</span>
+              <span class="nomPosteDroite col-xs-12 pull-right">postes électronique</span>
+            </div>
+          </div>
+          <div class="row sliderElec">
+            <!-- Carroussel -->
+            <div id="posteElecCarousel" class="col-xs-12 col-sm-4 col-sm-offset-2 pull-left">
+              <div id="carouselElec" class="carousel slide col-xs-12" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/ateliers/atelierElec.jpg" alt="poste électronique, première slide" class="first-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierElec.jpg" alt="poste électronique, deuxième slide" class="second-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierElec.jpg" alt="poste électronique, troisième slide" class="third-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierElec.jpg" alt="poste électronique, quatrième slide" class="fourth-slide img-responsive nopadding col-xs-12">
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators carouselElec-indicators">
+                      <li data-target="#carouselElec" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselElec" data-slide-to="1"></li>
+                      <li data-target="#carouselElec" data-slide-to="2"></li>
+                      <li data-target="#carouselElec" data-slide-to="3"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="col-xs-12 col-sm-4 col-sm-pull-2 descriptionPoste pull-right">
+              <!-- liste outils -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 listeOutil">
+                  <div class="col-xs-12 col-sm-6 nopadding">
+                    <p class="outil"><span class="hidden-xs">-</span> 4 fers à souder</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 2 oscilloscope</p>
+                    <p class="outil"><span class="hidden-xs">-</span> Kits ARDUINO</p>
+                    <p class="outil"><span class="hidden-xs">-</span> accessoires de soudage</p>
+                    <p class="outil"><span class="hidden-xs">-</span> alimentations de laboratoire</p>
+                    <p class="outil"><span class="hidden-xs">-</span> multimètres</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <a href="" class="col-xs-4 col-xs-offset-4 btn btnReservation">réserver</a>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <hr class="divider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section4">
+          <!-- nbre postes -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+              <span class="quantitePoste col-xs-12 col-sm-3 nopadding">2</span>
+              <span class="nomPoste col-xs-12 col-sm-9 col-md-12 col-lg-9">postes impression 3D</span>
+            </div>
+          </div>
+          <div class="row sliderBois">
+            <!-- Carroussel -->
+            <div id="posteBoisCarousel" class="col-xs-12 col-sm-4 col-sm-pull-2 pull-right">
+              <div id="carousel3D" class="carousel slide col-xs-12" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/ateliers/atelier3D.jpg" alt="poste impression 3D, première slide" class="first-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelier3D.jpg" alt="poste impression 3D, deuxième slide" class="second-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelier3D.jpg" alt="poste impression 3D, troisième slide" class="third-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelier3D.jpg" alt="poste impression 3D, quatrième slide" class="fourth-slide img-responsive nopadding col-xs-12">
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators carouselBois-indicators">
+                      <li data-target="#carousel3D" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel3D" data-slide-to="1"></li>
+                      <li data-target="#carousel3D" data-slide-to="2"></li>
+                      <li data-target="#carousel3D" data-slide-to="3"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2 descriptionPoste pull-left">
+              <!-- paragraphe -->
+              <div class="row hidden-xs">
+                <div class="col-sm-9 col-sm-offset-3">
+                  <p class="presentationAtelier">blabalbalbalabalbziabzoabzdouab</p>
+                </div>
+              </div>
+              <!-- liste outils -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 listeOutil">
+                  <div class="col-xs-12 col-sm-6 nopadding">
+                    <p class="outil"><span class="hidden-xs">-</span> 2 imprimantes 3D</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 2 postes informatiques</p>
+                    <p class="outil"><span class="hidden-xs">-</span> Logiciel de conception 3D</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <a href="" class="col-xs-4 col-xs-offset-4 btn btnReservation">réserver</a>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <hr class="divider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section5">
+          <!-- nbre postes -->
+          <div class="row">
+            <div class="col-xs-10 col-xs-pull-1 col-sm-4 col-sm-pull-2 pull-right">
+              <span class="quantitePosteDroite col-xs-12 col-sm-3 nopadding pull-right">3</span>
+              <span class="nomPosteDroite col-xs-12 pull-right">postes textile</span>
+            </div>
+          </div>
+          <div class="row sliderElec">
+            <!-- Carroussel -->
+            <div id="posteElecCarousel" class="col-xs-12 col-sm-4 col-sm-offset-2 pull-left">
+              <div id="carouselTextile" class="carousel slide col-xs-12" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/ateliers/atelierTextile.jpg" alt="poste textile, première slide" class="first-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierTextile.jpg" alt="poste textile, deuxième slide" class="second-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierTextile.jpg" alt="poste textile, troisième slide" class="third-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierTextile.jpg" alt="poste textile, quatrième slide" class="fourth-slide img-responsive nopadding col-xs-12">
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators carouselElec-indicators">
+                      <li data-target="#carouselTextile" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselTextile" data-slide-to="1"></li>
+                      <li data-target="#carouselTextile" data-slide-to="2"></li>
+                      <li data-target="#carouselTextile" data-slide-to="3"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="col-xs-12 col-sm-4 col-sm-pull-2 descriptionPoste pull-right">
+              <!-- paragraphe -->
+              <div class="row hidden-xs">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <p class="presentationAtelier">blabalbalbalabalbziabzoabzdouabdazdboaidnzpaizdjpaizjdpoazdjpoajdpoazjdpoajdzpoajz</p>
+                </div>
+              </div>
+              <!-- liste outils -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-9 col-sm-offset-3 listeOutil">
+                  <div class="col-xs-12 col-sm-8 col-sm-offset-1">
+                    <p class="outil"><span class="hidden-xs">-</span> 2 piqueuses industrielles</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 3 machines à coudre familiales</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 1 surjeteuse</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 2 mannequins</p>
+                    <p class="outil"><span class="hidden-xs">-</span> 1 table de coupe</p>
+                    <p class="outil"><span class="hidden-xs">-</span> consommables de base</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <a href="" class="col-xs-4 col-xs-offset-4 btn btnReservation">réserver</a>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <hr class="divider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section6">
+          <!-- nbre postes -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+              <span class="quantitePoste col-xs-12 col-sm-3 nopadding">1</span>
+              <span class="nomPoste col-xs-12 col-sm-9 col-md-12 col-lg-9">poste <br class="hidden-xs" /> découpe laser</span>
+            </div>
+          </div>
+          <div class="row sliderBois">
+            <!-- Carroussel -->
+            <div id="posteBoisCarousel" class="col-xs-12 col-sm-4 col-sm-pull-2 pull-right">
+              <div id="carouselLaser" class="carousel slide col-xs-12" data-ride="carousel">
+                <div class="row">
+                  <div class="carousel-inner nopadding" role="listbox">
+                    <div class="item active">
+                      <img src="../img/ateliers/atelierLaser.jpg" alt="poste découpe laser, première slide" class="first-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierLaser.jpg" alt="poste découpe laser, deuxième slide" class="second-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierLaser.jpg" alt="poste découpe laser, troisième slide" class="third-slide img-responsive nopadding col-xs-12">
+                    </div>
+                    <div class="item">
+                      <img src="../img/ateliers/atelierLaser.jpg" alt="poste découpe laser, quatrième slide" class="fourth-slide img-responsive nopadding col-xs-12">
+                    </div>
+                  </div>
+                  <!-- indicators -->
+                  <div class="row">
+                    <ol class="carousel-indicators carouselBois-indicators">
+                      <li data-target="#carouselLaser" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselLaser" data-slide-to="1"></li>
+                      <li data-target="#carouselLaser" data-slide-to="2"></li>
+                      <li data-target="#carouselLaser" data-slide-to="3"></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2 descriptionPoste pull-left">
+              <!-- paragraphe -->
+              <div class="row hidden-xs">
+                <div class="col-sm-9 col-sm-offset-3">
+                  <p class="presentationAtelier">blabalbalbalabalbziabzoabzdouab</p>
+                </div>
+              </div>
+              <!-- liste outils -->
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-9 col-sm-offset-3 listeOutil">
+                  <div class="col-xs-12 col-sm-6 col-md-10 nopadding">
+                    <p class="outil"><span class="hidden-xs">-</span> 1 découpe laser: Speedy 100 30W de chez TRotec</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                  <a href="" class="col-xs-4 col-xs-offset-4 btn btnReservation">réserver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <!-- fin container  -->
+    <footer class="container">
+      <div class="col-xs-12 nopadding">
+
+        <div class="footerLeft col-xs-12 col-md-2 col-md-push-2">
+          <div class="row">
+            <span class="col-sm-12 hidden-xs hidden-sm">nous suivre</span>
+            <br />
+            <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-12 col-md-push-0 socialMedia">
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/facebook.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/insta.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/youtube.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+              <a href="#" class="col-xs-3 col-sm-3 col-md-2"><img src="../img/twitter.png" alt="" class="img-responsive img-thumbnail-inverse"></a>
+            </div>
+          </div>
+          <div class="row hidden-md hidden-lg hidden-xl">
+            <div id="" class="newsletterMobile col-xs-12">
+              <div id="newsletter" class="col-xs-12 nopadding">
+                <form class="navbar-form col-xs-8 col-xs-push-2 col-sm-6 col-sm-push-4">
+                  <div class="form-group col-xs-12 nopadding">
+                    <span>newsletter</span>
+                    <br />
+                    <input type="text" class="form-control">
+                  </div>
+                  <button type="submit" name="newsletterBtn" class="btn btnFondNoir col-xs-6 col-xs-push-3">ok</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="liensFooter row">
+            <a href="" id="partenaires" class="col-xs-12">Partenaires</a>
+            <a href="" id="condGenerales" class="col-xs-12">Conditions générales de vente</a>
+          </div>
+        </div>
+
+        <div id="" class="footerMiddle hidden-xs hidden-sm col-sm-4 col-sm-push-2">
+          <div id="esusFooterAddress" class="row">
+            <div id="footerAddressLeft" class="col-md-4 footerAddressLeft">
+              <div class="text-right">
+                <p>ateliers
+                  <br />ésus</p>
+              </div>
+            </div>
+            <div id="" class="footerAddressRight col-md-8">
+              <div class="text-left">
+                <div class="addressUp">
+                  <p>13
+                    <br />Rue Bouteille
+                    <br />69001 LYON</p>
+                </div>
+                <div id="footerContact" class="addressDown">
+                  <p>04 25 27 67 95
+                    <br />contact@ateliersesus.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="" class="footerRight hidden-xs hidden-sm col-xs-8 col-xs-push-2 col-md-2 col-md-push-2">
+          <div id="newsletter">
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <span>newsletter</span>
+                <br />
+                <input type="text" class="form-control">
+              </div>
+              <br />
+              <button type="submit" name="newsletterBtn" class="btn btnFondNoir">ok</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- fin du wrapper -->
+
+  <!-- scripts essais  -->
+  <script type=text/javascript src="../node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script type=text/javascript src="../node_modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+  <!-- plugin pour le menu mobile -->
+  <script type=text/javascript src="../node_modules/jasny-bootstrap/js/jasny-bootstrap.js" charset="utf-8"></script>
+  <!-- plugin pour le hover du menu dropdown -->
+  <script src="../js/jquery.bootstrap-dropdown-hover.js"></script>
+  <!-- gestion du changement au scroll de la navigation -->
+  <script type="text/javascript" src="../node_modules/classie/classie.js"></script>
+  <script type=text/javascript src="../js/main.js"></script>
+</body>
+
+</html>

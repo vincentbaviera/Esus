@@ -1,0 +1,150 @@
+.infosTitre {
+  font-weight: bold;
+}
+.infosTexte {
+  margin-bottom: 20px;
+}
+hr {
+  border-top: 1px solid #000;
+}
+#section2 > div > div > h4 {
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+#miniskateInfo {
+  margin-top: -35px;
+}
+.dateProduit {
+  font-family: "helveticaNeueCdnBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+#section3 > div > div > div > div > hr {
+  margin-top: 5px;
+}
+.prix {
+  font-family: "helveticaNeueCdnBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.dividerPrix {
+  margin-bottom: 10px;
+}
+.places {
+  font-family: "helveticaNeueBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.bordureDroite {
+  border-right: 1px solid #000;
+}
+.esusSelect {
+  font-family: "helveticaNeueCdnBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+.esusSelect > option {
+  font-family: "helveticaNeueCdnBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+.nbrePlaces {
+  font-family: "helveticaNeueCdnBold", "HelveticaBold", arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+#section4 {
+  margin-bottom: 50px;
+}
+#section4 > div > div > hr {
+  margin-top: 35px;
+  margin-bottom: 7px;
+  margin-left: -20px;
+  border: 0;
+  border-top: 1px solid #000;
+}
+@media screen and (max-width: 767px) {
+  #section2 > div > div > h4 {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.img-responsive{
+  padding: 0;
+}
+#miniskateInfo {
+  margin-top: 10px;
+}
+.dateProduit{
+  font-size: 22px;
+  text-align: center;
+}
+.prix{
+  text-align: center;
+  margin-top: 10px;
+  border-top: 1px solid #000;
+}
+.bordureDroite{
+  border: 0;
+}
+.infoPlaces{
+  text-align: center;
+}
+.places{
+  font-size: 16px;
+}
+.placesContainer{
+  margin-bottom: 5px;
+}
+.reservationWS{
+  text-align: center;
+}
+.infosTitre{
+  text-align: center;
+}
+.infosTitre:first-child{
+  border-top: 1px solid #000;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+}
+
+/* Gestion Version tablette */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #miniskateInfo {
+    margin-top: -55px;
+  }
+  #section4 > div > div > hr {
+    margin-left: 0px;
+  }
+
+}
+
+/* Gestion Version desktop */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #section4 > div > div > hr {
+    margin-left: -50px;
+  }
+}
+
+/* Gestion Version large desktop */
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  #section4 > div > div > hr {
+    margin-left: 0px;
+  }
+}
+
+/* Version grosse résolution: +1600px*/
+
+@media screen and (min-width: 1600px) {
+  #section4 > div > div > hr {
+    margin-left: 0px;
+  }
+}
